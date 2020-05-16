@@ -1,0 +1,5 @@
+.fw-400{font-weight: 400}
+.contact-details{font-size: 16px}
+@media (max-width: 767px) {
+    .text-left-sm{text-align: left}
+}

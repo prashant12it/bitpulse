@@ -1,0 +1,81 @@
+
+<!-- Footer - Default Style -->
+<footer id="footer">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-12">
+        <h4 class="mb-80 text-center fw-400">{{FootText}}</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="contact-details">
+          <p class="mb-10"><strong><span class="glyphicon glyphicon-earphone icon-white xs-icon"></span>&nbsp; <a [attr.href]="'tel:'+contactNumber1">{{contactNumberFormated1}}</a></strong></p>
+          <p class="mb-10"><strong><span class="glyphicon glyphicon-earphone icon-white xs-icon"></span>&nbsp; <a [attr.href]="'tel:'+contactNumber2">{{contactNumberFormated2}}</a></strong></p>
+          <p class="mb-10"><strong><span class="glyphicon glyphicon-envelope icon-white xs-icon"></span>&nbsp; <a routerLink="/contact-us">Send Us Email</a></strong></p>
+          <p><strong><span class="glyphicon glyphicon-pencil icon-white xs-icon"></span>&nbsp; <a routerLink="/request-quote">Request A Quote</a></strong></p>
+        </div>
+      </div>
+      <!-- col-sm-4 -->
+      <div class="col-sm-4">
+        <div class="contact-details text-center text-left-sm">
+          <p class="mb-5"><strong><span class="glyphicon glyphicon-map-marker icon-white xs-icon"></span> {{SiteName}}</strong></p>
+          <p class="mb-5"><strong>
+            119/49 Nasimabad, R K Nagar,</strong></p>
+          <p class="mb-5"><strong>
+            Darshan Purwa, Kanpur - 208012 (U.P.)</strong></p>
+          <p><a
+                  title="Location on map"
+                  [attr.href]="'https://goo.gl/maps/4Zcv49x96AMVfMRbA'"
+                  rel="noreferrer"
+                  target="_blank">
+            <i class="icon-map-marker icon-white"></i> Open in Google Maps</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="contact-details text-right text-left-sm">
+          <p class="mb-5"><strong><a title="Bitpulse Technologies" routerLink="/">Home</a></strong></p>
+          <p class="mb-5"><strong><a title="About Us" routerLink="/hybrid-app-development-company">About Us</a></strong></p>
+          <p class="mb-5"><strong><a title="Our Services" routerLink="/best-web-development-company">Our Services</a></strong></p>
+          <p class="mb-5"><strong><a title="Work Process" routerLink="/web-development-testing-company">Work Process</a></strong></p>
+          <p class="mb-5"><strong><a title="Contact US" routerLink="/contact-us">Contact US</a></strong></p>
+          <p><strong><a title="Blogs" routerLink="/blogs">Blogs</a></strong></p>
+        </div>
+      </div>
+    </div>
+    <!--/ row -->
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="bottom clearfix">
+          <!-- social-icons -->
+          <ul class="social-icons sc--clean clearfix">
+            <li><a href="https://www.facebook.com/bitpulsetechnologies/" target="_blank" class="icon-facebook" rel="noreferrer" title="Facebook"></a></li>
+            <li><a href="https://twitter.com/BitpulseTech" target="_blank" class="icon-twitter" rel="noreferrer" title="Twitter"></a></li>
+            <li><a href="https://www.linkedin.com/company/bitpulse-technologies" target="_blank" rel="noreferrer" class="icon-linkedin" title="LinkedIn"></a></li>
+            <li><a href="https://www.youtube.com/watch?v=zW85PDlOxeU" target="_blank" class="icon-youtube"rel="noreferrer"  title="YouTube"></a></li>
+            <li><a href="https://medium.com/@bitpulsetech" target="_blank" class="fa-icon-medium"rel="noreferrer"  title="Medium"></a></li>
+          </ul>
+          <!--/ social-icons -->
+
+          <!-- copyright -->
+          <div class="copyright">
+
+            <p><a routerLink="/">
+              <img src="../../../assets/images/Bitpulse-Logo.png" alt="{{SiteName}}">
+            </a>© {{year}} All rights reserved.</p>
+          </div>
+          <!--/ copyright -->
+        </div>
+        <!--/ bottom -->
+      </div>
+      <!--/ col-sm-12 -->
+    </div>
+    <!--/ row -->
+  </div>
+  <!--/ container -->
+</footer>
+<!--/ Footer - Default Style -->

@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+body{font-size: 14px}
+#footer .copyright img{width: 120px; margin-top: -10px}
+.main-logo.hide{display: none}
+#sidebar-widget .widget_meta ul>li>a.fs-24{font-size: 16px}
+body .chaser #left-container .logo-container.hasInfoCard::before{display: none}
+body .chaser.visible #left-container .logo-container .site-logo img{margin-top: 10px}
+.kl-video-wrapper img{object-fit: cover}
+#first-header img{object-position: right}
+
+.kl-bg-source__overlay {
+    background: rgba(30, 115, 190, 0.3);
+    background: -moz-linear-gradient(left, rgba(30, 115, 190, 0.3) 0%, rgba(53, 53, 53, 0.3) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(30, 115, 190, 0.3)), color-stop(100%, rgba(53, 53, 53, 0.3)));
+    background: -webkit-linear-gradient(left, rgba(30, 115, 190, 0.3) 0%, rgba(53, 53, 53, 0.3) 100%);
+    background: -o-linear-gradient(left, rgba(30, 115, 190, 0.3) 0%, rgba(53, 53, 53, 0.3) 100%);
+    background: -ms-linear-gradient(left, rgba(30, 115, 190, 0.3) 0%, rgba(53, 53, 53, 0.3) 100%);
+    background: linear-gradient(to right, rgba(30, 115, 190, 0.3) 0%, rgba(53, 53, 53, 0.3) 100%);
+}
+
+#cf_phone input{border: 0px; width: 100%; padding: 5px}
+.input-group-addon.flagInput{border: 0px}
+#cf_phone input:focus,
+.input-group-addon.flagInput .btn:focus,
+.input-group-addon.flagInput .dropdown:focus,
+.input-group-addon.flagInput:focus
+{outline: none}
+.break-word{
+    word-break: break-all}
+
+.iti__selected-flag div{margin-top: 10px}

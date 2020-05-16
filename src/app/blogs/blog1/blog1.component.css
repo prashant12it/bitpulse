@@ -1,0 +1,8 @@
+.kl-bg-source__bgimage {
+    background-image: url(../blog-imgs/best-web-development-company.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+}

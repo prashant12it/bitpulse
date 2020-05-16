@@ -1,0 +1,342 @@
+<div class="kl-slideshow static-content__slideshow uh_light_gray maskcontainer--shadow_ud">
+    <div class="bgback">
+    </div>
+
+    <!-- Static content wrapper with custom minimum height (500px) = .min-500 -->
+    <div class="kl-slideshow-inner static-content__wrapper min-500">
+        <!-- Static content source -->
+        <div class="static-content__source">
+            <!-- Background -->
+            <div class="kl-bg-source">
+                <!-- Background image -->
+                <div class="kl-bg-source__bgimage">
+                </div>
+                <!-- Background image -->
+
+                <!-- Gradient overlay -->
+                <div class="kl-bg-source__overlay">
+                </div>
+                <!--/ Gradient overlay -->
+            </div>
+            <!--/ Background -->
+
+            <!-- Animated Sparkles -->
+            <div class="th-sparkles"></div>
+            <!--/ Animated Sparkles -->
+        </div>
+        <!--/ .static-content__source -->
+
+        <!-- Static content container -->
+        <div class="static-content__inner container">
+            <!-- Container with safe padding default top 150px -->
+            <div class="kl-slideshow-safepadding sc__container ">
+                <!-- Static content wrapper -->
+                <div class="static-content default-style">
+                    <!-- Title -->
+                    <h1 class="static-content__subtitle text-center ptop-80">
+                        <span class="fw-thin"><span class="fw-semibold fs-36"><span data-rel="tooltip"
+                                                                                    data-placement="top" title=""
+                                                                                    data-animation="true"
+                                                                                    data-original-title="Bitpulse Technologies">Let's Build Something Great Together!</span></span></span>
+                    </h1>
+                    <!--/ Title -->
+
+                    <!-- Info pop-up fade animation left aligned with top arrow -->
+
+                    <!--/ Info pop-up fade animation left aligned with top arrow -->
+                </div>
+                <!--/ .static-content -->
+            </div>
+            <!--/ Container with safe padding default top 150px -->
+        </div>
+        <!--/ .kl-slideshow-inner__inner -->
+    </div>
+    <!--/ Static content wrapper with custom minimum height (500px) = .min-500 -->
+
+    <!-- Bottom mask style 2  -->
+    <div class="kl-bottommask kl-bottommask--shadow_ud">
+    </div>
+    <!--/ Bottom mask style 2  -->
+</div>
+<section class="hg_section pbottom-20">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-9 col-sm-9">
+                <div class="kl-title-block clearfix text-center tbk-symbol--border2 tbk-icon-pos--after-title">
+                    <!-- Title with custom font size and theme color-->
+                    <h3 class="tbk__title fs-20 tcolor">
+                        <!-- Border helper -->
+                        <span class="tbk__border-helper">SEND YOUR REQUIREMENTS</span>
+                    </h3>
+                    <h4 class="pt-3">Let us know your requirements. We will get back to you within 24 hours.</h4>
+                    <!--/ Title with custom font size and theme color-->
+
+                    <!-- Title bottom symbol -->
+                    <div class="tbk__symbol ">
+                        <span></span>
+                    </div>
+                    <!--/ Title bottom symbol -->
+                </div>
+                <!-- Contact form -->
+                <div class="contactForm">
+                    <form class="contact_form row"
+                          ngNativeValidate
+                          (ngSubmit)="senQuery(quoteForm)" #quoteForm="ngForm"
+                          enctype="multipart/form-data">
+                        <div class="cf_response"></div>
+                        <p class="col-sm-6 kl-fancy-form">
+                            <input [type]="'text'" [name]="'name'" id="cf_name" ngModel class="form-control"
+                                   [placeholder]="'Please enter your first name'" [value]="" tabindex="1"
+                                   [pattern]="'^[-a-zA-Z\\s]+$'" [minlength]="2" [maxlength]="35" required>
+                            <label class="control-label">FIRSTNAME</label>
+                            <span class="alert alert-danger col-md-12 mt-1"
+                                  *ngIf="!quoteForm.valid && quoteForm.controls.name.invalid && quoteForm.controls.name.touched">
+              Valid Firstname is required.
+            </span>
+                        </p>
+                        <p class="col-sm-6 kl-fancy-form">
+                            <input [type]="'text'" [name]="'lastname'" id="cf_lastname" ngModel class="form-control"
+                                   [placeholder]="'Please enter your first last name'" [value]="" tabindex="1"
+                                   [pattern]="'^[-a-zA-Z\\s]+$'" [minlength]="2" [maxlength]="35">
+                            <label class="control-label">LASTNAME</label>
+                            <span class="alert alert-danger col-md-12 mt-1"
+                                  *ngIf="!quoteForm.valid && quoteForm.controls.lastname.invalid && quoteForm.controls.lastname.touched">
+              Valid Lastname is required.
+            </span>
+                        </p>
+                        <p class="clearfix mb-0"></p>
+                        <p class="col-sm-6 kl-fancy-form">
+                            <input [type]="'email'" [name]="'email'" id="cf_email" ngModel class="form-control h5-email"
+                                   [placeholder]="'Please enter your email address'" [value]="" tabindex="1"
+                                   [maxlength]="50" email required>
+                            <label class="control-label">EMAIL</label>
+                            <span class="alert alert-danger col-md-12 mt-1"
+                                  *ngIf="!quoteForm.valid && quoteForm.controls.email.invalid && quoteForm.controls.email.touched">
+              Valid Email address is required.
+            </span>
+                        </p>
+                        <p class="col-sm-6 kl-fancy-form">
+                            <input [type]="'tel'" [name]="'contactNo'" id="cf_phone" ngModel
+                                   class="form-control h5-email"
+                                   [placeholder]="'Enter phone number'" (blur)="getPhoneNo()" [value]="" tabindex="1"
+                                   [minlength]="4"
+                                   [maxlength]="15" required>
+                            <label class="control-label">CONTACT NO.</label>
+                            <!-- sample error message -->
+                            <span class="alert alert-danger col-md-12 mt-1"
+                                  *ngIf="!quoteForm.valid && quoteForm.controls.contactNo.invalid && quoteForm.controls.contactNo.touched && quoteForm.controls.contactNo.errors.required">
+              Valid Phone is required
+            </span>
+                            <span class="alert alert-danger col-md-12 mt-1"
+                                  *ngIf="!quoteForm.valid && quoteForm.controls.contactNo.invalid && quoteForm.controls.contactNo.touched && quoteForm.controls.contactNo.errors.pattern">
+              Be sure to include the area code and 7-digit number
+            </span>
+                        </p>
+
+                        <p class="clearfix mb-0"></p>
+                        <p class="col-sm-6 kl-fancy-form">
+                            <select id="projectType" ngModel class="form-control" [name]="'projectType'"
+                                    autocomplete="off" required>
+                                <option value="" selected="">Select Type of Project</option>
+                                <option value="1">Content Management Systems</option>
+                                <option value="2">Presentation Websites</option>
+                                <option value="3">Custom Web Development</option>
+                                <option value="4">Online Catalogues</option>
+                                <option value="5">Web Application Development</option>
+                                <option value="6">Portal Systems</option>
+                                <option value="7">Hybrid App Development</option>
+                                <option value="8">Android App Development</option>
+                                <option value="9">iOS App Development</option>
+                                <option value="10">Virtual Shops and e-Commerce</option>
+                                <option value="11">Functional Testing</option>
+                                <option value="12">Mobile Testing</option>
+                                <option value="13">Security Testing</option>
+                                <option value="14">Others</option>
+                            </select>
+                            <label class="control-label">PROJECT TYPE</label>
+                            <span class="alert alert-danger col-md-12 mt-1"
+                                  *ngIf="!quoteForm.valid && quoteForm.controls.projectType.invalid && quoteForm.controls.projectType.touched">
+              Valid Project Type is required.
+            </span>
+                        </p>
+                        <p class="col-sm-6 kl-fancy-form">
+                            <input [type]="'text'" [name]="'website'" id="cf_website" ngModel class="form-control"
+                                   [placeholder]="'Enter the website URL'" [value]="" tabindex="1" [minlength]="2"
+                                   [maxlength]="100"
+                                   [pattern]="'(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?'">
+                            <label class="control-label">WEBSITE</label>
+                            <span class="alert alert-danger col-md-12 mt-1"
+                                  *ngIf="!quoteForm.valid && quoteForm.controls.website.invalid && quoteForm.controls.website.errors.pattern && quoteForm.controls.website.touched">
+              Valid URL is required.
+            </span>
+                        </p>
+                        <p class="clearfix mb-0"></p>
+                        <p class="col-sm-12 kl-fancy-form">
+                            <input [type]="'text'" [name]="'subject'" id="cf_subject" ngModel class="form-control"
+                                   [placeholder]="'Enter the subject message'" [value]="" tabindex="1" [minlength]="2"
+                                   [maxlength]="150" required>
+                            <label class="control-label">PROJECT TITLE</label>
+                            <span class="alert alert-danger col-md-12 mt-1"
+                                  *ngIf="!quoteForm.valid && quoteForm.controls.subject.invalid && quoteForm.controls.subject.touched">
+              Valid Project Title is required.
+            </span>
+                        </p>
+                        <p class="col-sm-12 kl-fancy-form">
+                            <textarea [name]="'message'" id="cf_message" ngModel class="form-control" [minlength]="2"
+                                      [maxlength]="500" [cols]="30" [rows]="10"
+                                      [placeholder]="'Explain your requirement here'"
+                                      tabindex="4" required></textarea>
+                            <label class="control-label">MESSAGE</label>
+                            <span class="alert alert-danger col-md-12 mt-1"
+                                  *ngIf="!quoteForm.valid && quoteForm.controls.message.invalid && quoteForm.controls.message.touched">
+              Valid Requirement statement(s) is required.
+            </span>
+                        </p>
+                        <p class="col-sm-6 kl-fancy-form">
+                            <input [type]="'text'" [minlength]="2" [maxlength]="12" [name]="'budget'" id="cf_budget" ngModel class="form-control"
+                                   [placeholder]="'Enter your budget with currency code e.g. USD, INR, etc.'" [value]="" tabindex="1">
+                            <label class="control-label">ESTIMATED BUDGET</label>
+                            <span class="alert alert-danger col-md-12 mt-1"
+                                  *ngIf="!quoteForm.valid && quoteForm.controls.budget.invalid && quoteForm.controls.budget.touched">
+              Enter valid budget value.
+            </span>
+                        </p>
+                        <div class="col-lg-6 kl-fancy-form">
+                            <input #attachment name="Attachmentfile[]" (change)="getFileName($event)"
+                                   id="Attachmentfile"
+                                   type="file" multiple
+                                   class="d-none">
+                            <button [type]="'button'"
+                                    class="btn btn-txt-size btn-fullcolor col-lg-12 text-uppercase"
+                                    (click)="attachment.click()">
+                                SELECT PROJECT SPECIFICATION DOCUMENT(S)
+                            </button>
+                            <div *ngIf="FileNameArr?.length<=5;">
+                                <h6 class="mt-3" *ngFor="let FileName of FileNameArr;let i = index;">{{FileNameArr[i]}}</h6>
+                            </div>
+                            <div class="alert alert-danger mt-50"
+                                 *ngIf="FileNameArr?.length>5;">
+                                Maximum 5 files are allowed to upload.
+                            </div>
+                        </div>
+                        <p class="col-sm-12 kl-fancy-form">Accepted Format (.Zip, .Docx, .Doc, .Xls, .Xlsx, .Ppt, .Pptx, .Rar, .Jpeg, .Jpg, .Png, .Pdf) Accepted Max. File Size 10 MB.</p>
+                        <p class="col-sm-12 kl-fancy-form">
+                            <re-captcha *ngIf="showCaptcha" (resolved)="resolved($event)"
+                                        siteKey="{{captchaKey}}"></re-captcha>
+                            <span class="alert alert-danger col-md-12 mt-1"
+                                  *ngIf="captchaErr">
+              Captcha must be solved.
+            </span>
+                        </p>
+                        <p class="col-sm-12">
+                            <button [disabled]="!quoteForm.valid || !siteCaptcha" [type]="'submit'"
+                                    class="btn btn-fullcolor col-sm-12 col-md-6 col-lg-6" name="contactForm">
+                                Send
+                            </button>
+                        </p>
+
+                    </form>
+                </div>
+                <!--/ Contact form -->
+            </div>
+            <!--/ col-md-9 col-sm-9 -->
+
+            <div class="col-md-3 col-sm-3">
+                <!-- Contact details -->
+                <div class="kl-title-block clearfix text-center mt-md-0 mt-lg-0 mt-sm-50 tbk-symbol--border2 tbk-icon-pos--after-title">
+                    <!-- Title with custom font size and theme color-->
+                    <h3 class="tbk__title fs-20 tcolor">
+                        <!-- Border helper -->
+                        <span class="tbk__border-helper">CONTACT INFO</span>
+                    </h3>
+                    <!--/ Title with custom font size and theme color-->
+
+                    <h4 class="pt-3">{{SiteName}}</h4>
+                    <!-- Title bottom symbol -->
+                    <div class="tbk__symbol ">
+                        <span></span>
+                    </div>
+                    <!--/ Title bottom symbol -->
+                </div>
+                <div class="text_box">
+                    <p>
+                        119/49 Nasimabad, R K Nagar,<br/>
+                        Darshan Purwa, Kanpur - 208012 (U.P.)
+                    </p>
+                    <p class="break-word">
+                        <a [attr.href]="'tel:'+contactNumber1">{{contactNumberFormated1}}</a><br/>
+                        <a [attr.href]="'tel:'+contactNumber2">{{contactNumberFormated2}}</a><br/>
+                        <a [attr.href]="'mailto:'+contactEmail">{{contactEmail}}</a><br>
+                        <a routerLink="/">https://bitpulsetechnologies.com</a>
+                    </p>
+                </div>
+                <!--/ Contact details -->
+            </div>
+            <!--/ col-md-3 col-sm-3 -->
+        </div>
+        <!--/ .row -->
+    </div>
+    <!--/ .container -->
+</section>
+
+<div class="modal fade" id="successModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title text-success">Thank You! </h4>
+                <button type="button" class="close" data-dismiss="modal" (click)="refreshForm()">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div>
+                    <p>Your quote has been sent successfully. We'll get back to you within 24 hours. We assure you
+                        that your requirement will be fulfilled by Bitpulse Technologies at very reasonable cost with
+                        best services. </p>
+                    <p></p>
+                    <p>Thank you for contacting us. </p>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" (click)="refreshForm()" data-dismiss="modal">Close
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="errorModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title text-danger">Error! </h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div>
+                    <p>Something goes wrong while sending your quote. Please try after sometime or send us a mail at <a
+                            href="mailto:info@bitpulsetechnologies.com">info@bitpulsetechnologies.com</a></p>
+                    <h4 *ngIf="errorMessageInstitute != ''" class="text-danger"> Check for the below error(s)</h4>
+                    <p *ngIf="errorMessageInstitute != ''" class="text-danger"> {{errorMessageInstitute}}</p>
+                    <p>Thank you for contacting us. </p>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<app-foot-text [FootText]="FooterText"></app-foot-text>
